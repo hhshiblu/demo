@@ -5,6 +5,7 @@ import { redirect } from "next/navigation"
 import { ObjectId } from "mongodb"
 import bcrypt from "bcrypt"
 import clientPromise from "@/db/db"
+import { log } from "node:console"
 
 export async function signUp(formData) {
   const email = formData.get("email")
@@ -136,7 +137,8 @@ export async function updateUserProfile(formData) {
     const client = await clientPromise
     const db = client.db()
     const usersCollection = db.collection("users")
-
+ console.log(userId);
+ 
     if (email) {
       const existingUser = await usersCollection.findOne({
         email,
