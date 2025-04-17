@@ -142,8 +142,8 @@ export default function ProfilePage() {
                 </Button>
               )}
             </div>
-            <h2 className="text-xl font-bold mt-4">{userData.name}</h2>
-            <p className="text-muted-foreground">{userData.email}</p>
+            <h2 className="text-xl font-bold mt-4">{userData?.name}</h2>
+            <p className="text-muted-foreground">{userData?.email}</p>
 
             {editMode && (
               <Button variant="outline" className="mt-4">
@@ -166,14 +166,14 @@ export default function ProfilePage() {
               <Label htmlFor="name">Full Name</Label>
               <div className="relative">
                 <User className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                <Input id="name" defaultValue={userData.name} className="pl-10" readOnly={!editMode} />
+                <Input id="name" defaultValue={userData?.name} className="pl-10" readOnly={!editMode} />
               </div>
             </div>
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <div className="relative">
                 <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                <Input id="email" type="email" defaultValue={userData.email} className="pl-10" readOnly={!editMode} />
+                <Input id="email" type="email" defaultValue={userData?.email} className="pl-10" readOnly={!editMode} />
               </div>
             </div>
            
