@@ -129,10 +129,7 @@ export default function ProfilePage() {
               <Avatar className="w-24 h-24 border-4 border-primary">
                 <AvatarImage src={"/israt.jpg"} alt={userData?.name} />
                 <AvatarFallback className="text-2xl">
-                  {userData.name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")}
+                  {userData?.name}
                 </AvatarFallback>
               </Avatar>
               {editMode && (
