@@ -45,6 +45,7 @@ export default function LoginPage() {
   return (
     <div className="app-container flex items-center justify-center p-4">
       <Card className="w-full">
+        <div></div>
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl font-bold text-center">FitTrack</CardTitle>
           <CardDescription className="text-center">Enter your credentials to login</CardDescription>
