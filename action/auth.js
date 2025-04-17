@@ -87,7 +87,7 @@ export async function login(formData) {
       }
     }
 
-    return { success: true, userId: user._id.toString() }
+    return { success: true}
   } catch (error) {
     console.error("Login error:", error)
     return {
@@ -114,7 +114,7 @@ export async function getCurrentUser() {
     }
 
     const { password, ...userWithoutPassword } = user
-    return userWithoutPassword
+    return JSON.parse(JSON.stringify(userWithoutPassword))
   } catch (error) {
     console.error("Get current user error:", error)
     return null
