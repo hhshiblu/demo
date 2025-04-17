@@ -94,7 +94,7 @@ export default function Dashboard() {
       <header className="app-header">
         <div className="flex justify-between items-center">
           <div>
-            <h1 className="text-lg font-semibold">Hello, {userData.name.split(" ")[0]}</h1>
+            <h1 className="text-lg font-semibold">Hello, {userData?.name.split(" ")[0]}</h1>
             <p className="text-sm text-muted-foreground">Let's check your progress</p>
           </div>
           <div className="flex items-center gap-3">
@@ -108,14 +108,17 @@ export default function Dashboard() {
               {editMode ? "Done" : "Edit"}
             </Button>
             <Avatar className="border-2 border-primary cursor-pointer" onClick={handleProfileClick}>
-              <AvatarImage src={userData.avatar || "/israt.jpg"} alt={userData.name} />
+              <AvatarImage src={"/israt.jpg"} alt={userData?.name} />
               <AvatarFallback>
-                {userData.name
+                {userData?.name
                   .split(" ")
                   .map((n) => n[0])
                   .join("")}
               </AvatarFallback>
             </Avatar>
+          </div>
+          <div>
+            <></>
           </div>
         </div>
       </header>

@@ -127,7 +127,7 @@ export default function ProfilePage() {
           <CardContent className="p-6 flex flex-col items-center">
             <div className="relative">
               <Avatar className="w-24 h-24 border-4 border-primary">
-                <AvatarImage src={userData.avatar || "/israt.jpg"} alt={userData.name} />
+                <AvatarImage src={"/israt.jpg"} alt={userData?.name} />
                 <AvatarFallback className="text-2xl">
                   {userData.name
                     .split(" ")
