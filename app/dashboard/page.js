@@ -94,7 +94,7 @@ export default function Dashboard() {
       <header className="app-header">
         <div className="flex justify-between items-center">
           <div>
-            <h1 className="text-lg font-semibold">Hello, {userData?.name}</h1>
+            <h1 className="text-lg font-semibold">Hello,{userData?.name?userData?.name:"israt shifa"}</h1>
             <p className="text-sm text-muted-foreground">Let's check your progress</p>
           </div>
           <div className="flex items-center gap-3">
@@ -110,7 +110,7 @@ export default function Dashboard() {
             <Avatar className="border-2 border-primary cursor-pointer" onClick={handleProfileClick}>
               <AvatarImage src={"/israt.jpg"} alt={userData?.name} />
               <AvatarFallback>
-                {userData?.name}
+              {userData?.name?userData?.name:"israt shifa"}
               </AvatarFallback>
             </Avatar>
           </div>
